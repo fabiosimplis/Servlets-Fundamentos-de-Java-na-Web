@@ -1,3 +1,9 @@
+Aula_4-Filtrando requisições 
+
+- doFilter
+- Filtra as requisições de modo a saber por onde o usuario esta acessando.
+----------------------------------------------
+
 Aula_1  Servlet API e fundamentos da Web
 
 - HttpServlet
