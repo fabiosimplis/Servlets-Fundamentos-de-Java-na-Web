@@ -29,15 +29,15 @@ public class Login extends HttpServlet{
 		
 		PrintWriter writer  = resp.getWriter();
 		if (usuario == null) {
-			writer.println("<head><body> Usúario ou Senha inválido </body></head>");
+			writer.println("<head><body> Usuário ou Senha inválido </body></head>");
 		}
 		else
-		{
-			Cookie cookie = new Cookie(email, "1");
+		{							
+			Cookie cookie = new Cookie("logado", email); //Cookie(name. value)
+			cookie.setMaxAge(1 * 60);//tempo de vida do cookie
 			resp.addCookie(cookie);
-			writer.println("<head><body> Usúario ou Senha inválido" + email + "</body></head>");
+			writer.println("<head><body> Usuário: " + email + " Logado!" + "</body></head>");
 		}
-		
 		
 	}
 
