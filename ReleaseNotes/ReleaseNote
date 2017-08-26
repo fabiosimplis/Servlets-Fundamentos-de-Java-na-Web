@@ -1,3 +1,17 @@
+Aula_6-Manipulando cookies existentes
+
+- verifica se o cookie do usuario existe
+- Ação de Logout
+- Alterando o tempo de expiração do Cookie.
+
+-----------------------------------------------
+Aula_5-Mantendo informações relativas ao usuário com cookies 
+- Login
+- Adiciona cookie
+- Verifica usuario logado no filtro
+- Alterando filtro
+-----------------------------------------------
+
 Aula_4-Filtrando requisições 
 
 - doFilter
