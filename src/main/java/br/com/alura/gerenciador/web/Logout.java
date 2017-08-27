@@ -9,6 +9,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns="/logout")
 public class Logout extends HttpServlet{
@@ -16,16 +17,10 @@ public class Logout extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
-		Cookie cookie = new Cookies(req.getCookies()).getUsuarioLogado();
-		
+		HttpSession session = req.getSession();
+		session.removeAttribute("logado");//apaga somente host
+		//session.invalidate(); apaga totalmente cliente e no host
 		PrintWriter writer =resp.getWriter() ;
-		
-		if(cookie == null)
-			writer.println("<head><body> <Usuario não logado> </body></head>");
-		
-		
-		cookie.setMaxAge(0);//zera o tempo de vida do cookie.
-		resp.addCookie(cookie);// reevia para o client para finalizar o cookie
 		writer.println("<head><body> Logout efetuado com sucesso! </body></head>");
 			
 		

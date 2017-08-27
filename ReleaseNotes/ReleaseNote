@@ -1,3 +1,10 @@
+Aula_7-Mantendo informações no lado do servidor com session 
+
+- Alterando os cookies para session
+- Alteração da classes Login, Logout e filtroDeAuditor 
+
+-----------------------------------------------
+
 Aula_6-Manipulando cookies existentes
 
 - verifica se o cookie do usuario existe
@@ -5,6 +12,7 @@ Aula_6-Manipulando cookies existentes
 - Alterando o tempo de expiração do Cookie.
 
 -----------------------------------------------
+
 Aula_5-Mantendo informações relativas ao usuário com cookies 
 - Login
 - Adiciona cookie
@@ -22,3 +30,4 @@ Aula_1  Servlet API e fundamentos da Web
 
 - HttpServlet
 - Metodo doGet
+
