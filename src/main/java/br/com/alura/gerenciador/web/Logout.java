@@ -3,6 +3,7 @@ package br.com.alura.gerenciador.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -20,9 +21,9 @@ public class Logout extends HttpServlet{
 		HttpSession session = req.getSession();
 		session.removeAttribute("logado");//apaga somente host
 		//session.invalidate(); apaga totalmente cliente e no host
-		PrintWriter writer =resp.getWriter() ;
-		writer.println("<head><body> Logout efetuado com sucesso! </body></head>");
-			
+		//resp.sendRedirect("logout.html");// Redireciona como 302			
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/paginas/logout.html");
+		dispatcher.forward(req, resp);
 		
 	}
 
