@@ -2,6 +2,11 @@
 <body>
 Bem vindo ao nosso gerenciador de empresas!<br/>
 
+<c:if test="${logado!=null}"><!-- mostra usuario logado, Logado tem de estar com o mesmo string que no co
+codigo da classe login -->
+    Você está logado como ${logado.email}<br/>
+</c:if>
+
  <br>BUSCA</br>
  <form action="novaEmpresa" method="post">
      Nome: <input type="text" name="nome" /><br />
