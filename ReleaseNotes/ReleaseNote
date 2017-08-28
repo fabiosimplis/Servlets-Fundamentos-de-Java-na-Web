@@ -1,3 +1,12 @@
+Aula_12-Um padrão de controle 
+- API de Java que permite a criação dinâmica de objetos
+- instancia de um objeto do tipo da classe anterior
+- Criando a servlet que faz tudo: Controle
+- Migrando a nova empresa
+- Migrando a busca empresa
+
+-----------------------------------------------
+
 Aula_11-Trabalhando com Taglibs
 
 - Separando a view de busca empresa

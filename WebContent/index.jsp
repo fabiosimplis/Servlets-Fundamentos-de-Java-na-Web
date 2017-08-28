@@ -7,8 +7,8 @@ codigo da classe login -->
     Você está logado como ${logado.email}<br/>
 </c:if>
 
- <br>BUSCA</br>
- <form action="novaEmpresa" method="post">
+ <br>Adiciona</br>
+ <form action="controle?tarefa=NovaEmpresa" method="post">
      Nome: <input type="text" name="nome" /><br />
      <input type="submit" value="Enviar" />
  </form>
@@ -19,7 +19,7 @@ codigo da classe login -->
     <input type="submit" value="Login" />
 </form>
 
-<form action="logout" method="post">
+<form action="controle?tarefa=Logout" method="post">
     <input type="submit" value="Logout" />
 </form>
  

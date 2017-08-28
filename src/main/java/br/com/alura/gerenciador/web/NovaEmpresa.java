@@ -16,18 +16,21 @@ import br.com.alura.gerenciador.dao.EmpresaDAO;
 import sun.rmi.server.Dispatcher;
 
 @WebServlet(urlPatterns="/novaEmpresa")
-public class NovaEmpresa extends HttpServlet{
+public class NovaEmpresa implements Tarefa{
 
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	public java.lang.String executa(HttpServletRequest req, HttpServletResponse resp) {
 		
 		String nome = req.getParameter("nome");
 		Empresa empresa = new Empresa(nome);
 		new EmpresaDAO().adiciona(empresa);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/paginas/novaEmpresa.jsp");
-		req.setAttribute("nome", nome);
-		dispatcher.forward(req, resp);
+		req.setAttribute("nome", nome);// set no nome para continuar na session e enviar o nome para a proxima tela
+		return "/WEB-INF/paginas/novaEmpresa.jsp";
+		
 	}
+		
+		
+	
 	
 }

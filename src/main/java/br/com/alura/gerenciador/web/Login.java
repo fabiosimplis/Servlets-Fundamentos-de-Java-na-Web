@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 import br.com.alura.gerenciador.Usuario;
 import br.com.alura.gerenciador.dao.UsuarioDAO;
 
-@WebServlet(urlPatterns = "/login")
+@WebServlet(urlPatterns = "/login")//URL que sera acessada
 public class Login extends HttpServlet{
 	
 	@Override
